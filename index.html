@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLATNLTI - Crash Course 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #002f6c;
+      --accent-color: #ffa726;
+      --secondary-color: #0a3d91;
+      --light-bg: #f9f9f9;
+      --dark-bg: #003366;
+      --text-color: #111;
+    }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--text-color);
+      background: white;
+    }
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--accent-color);
+    }
+    .hero {
+      background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero button {
+      padding: 1rem 2rem;
+      background-color: var(--accent-color);
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      margin-top: 2rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .hero button:hover {
+      background-color: #ff9800;
+    }
+    .section {
+      padding: 4rem 2rem;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2rem;
+      color: var(--primary-color);
+    }
+    .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      justify-content: center;
+      align-items: stretch;
+    }
+    .card {
+      background: var(--light-bg);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .crash-course {
+      background: var(--dark-bg);
+      color: white;
+      padding: 4rem 2rem;
+      border-radius: 20px;
+      margin: 2rem auto;
+    }
+    .crash-course ul {
+      list-style: none;
+      padding: 0;
+    }
+    .crash-course li::before {
+      content: '✔';
+      margin-right: 0.5rem;
+      color: var(--accent-color);
+    }
+    .videos, .testimonials {
+      margin-top: 2rem;
+    }
+    .video-card, .testimonial-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .video-card button {
+      margin-top: 1rem;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .testimonial-card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .form-section {
+      background: #eef2f7;
+      padding: 4rem 2rem;
+      border-radius: 20px;
+    }
+    form input, form textarea, form button {
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      margin: 1rem auto;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background-color: var(--secondary-color);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CLATNLTI</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Courses</a>
+      <a href="#">Crash Course</a>
+      <a href="#">Testimonials</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Crash Course for CLAT 2026</h2>
+    <p>Secure your dream law school seat with our expertly designed crash course.</p>
+    <button>Enroll Now</button>
+  </section>
+
+  <section class="section">
+    <h2>Why Choose Us?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Expert Mentors</h3>
+        <p>Top legal professionals with vast teaching experience.</p>
+      </div>
+      <div class="card">
+        <h3>Mock Tests</h3>
+        <p>Get hands-on with real CLAT-style full-length tests and detailed analysis.</p>
+      </div>
+      <div class="card">
+        <h3>Live Interactive Sessions</h3>
+        <p>Join daily live classes to clarify every topic with ease.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="crash-course">
+    <h2>CLAT Crash Course Highlights</h2>
+    <ul>
+      <li>2 live classes per subject</li>
+      <li>Expert mentorship & guidance</li>
+      <li>Mock tests + analysis</li>
+      <li>Custom study plan</li>
+    </ul>
+    <h3 style="margin-top: 2rem;">Limited Time Fee: ₹10,000</h3>
+    <p>Valid until July 31</p>
+  </section>
+
+  <section class="section">
+    <h2>Watch Demo Classes</h2>
+    <div class="grid videos">
+      <div class="video-card">
+        <h4>Legal Aptitude</h4>
+        <button>Watch Now</button>
+      </div>
+      <div class="video-card">
+        <h4>Logical Reasoning</h4>
+        <button>Watch Now</button>
+      </div>
+      <div class="video-card">
+        <h4>English Comprehension</h4>
+        <button>Watch Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Student Testimonials</h2>
+    <div class="grid testimonials">
+      <div class="testimonial-card">
+        <img src="https://via.placeholder.com/60" alt="Ananya Raj" />
+        <h4>Ananya Raj</h4>
+        <p>“This course helped me complete revision with great speed and clarity.”</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://via.placeholder.com/60" alt="Raj Mehta" />
+        <h4>Raj Mehta</h4>
+        <p>“The mock structure and feedback were game-changers.”</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://via.placeholder.com/60" alt="Simran Kaur" />
+        <h4>Simran Kaur</h4>
+        <p>“Mentors gave me full support and confidence for CLAT.”</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <h2>Get a Call Back</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <input type="email" placeholder="Email Address" required />
+      <textarea rows="4" placeholder="Your Query"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</body>
+</html>
